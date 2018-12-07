@@ -145,7 +145,7 @@ for result in results:
 # 返回结果是Cursor类型，相当于一个生成器，我们需要遍历取到所有的结果，每一个结果都是字典类型。
 
 # 如果要查询年龄大于20的数据，则写法如下：
-
+from bs4 import BeautifulSoup
 results = collection.find({'age': {'$gt': 20}})
 # 在这里查询的条件键值已经不是单纯的数字了，而是一个字典，其键名为比较符号$gt，意思是大于，键值为20，这样便可以查询出所有
 # 年龄大于20的数据。
